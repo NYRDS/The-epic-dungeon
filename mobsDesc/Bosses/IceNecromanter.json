@@ -24,7 +24,8 @@
     "Frost",
     "Poison",
     "Vertigo",
-    "Bleeding"
+    "Bleeding",
+    "Death"
   ],
   "loot": {
     "kind": "SkeletonKey"
@@ -36,8 +37,5 @@
   "scriptFile": "scripts/bosses/IceNecromanter",
   "spriteDesc": "spritesDesc/IceNecromanter_Desc.json",
   "walkingType": "NORMAL",
-   "immunities": [
-    "Death"
-  ],
   "isBoss":true
 }

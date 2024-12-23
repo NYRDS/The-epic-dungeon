@@ -40,7 +40,7 @@ return item.init {
                 RPD.playSound("snd_hit.mp3")
                 return dmg
             else
-                soul:getSprite():showStatus(0xCCAA44, RPD.StringsManager:maybeId("Dodged"))
+                soul:showStatus(0xCCAA44, RPD.StringsManager:maybeId("Dodged"))
                 item:dropTo(cell)
             end
 

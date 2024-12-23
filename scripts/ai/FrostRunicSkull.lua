@@ -21,7 +21,6 @@ for j = y - 4, y + 4 do
 local pos = RPD.Dungeon.level:cell(i,j)
 if level.map[pos] == RPD.Terrain.EMBERS and pos ~= me:getPos() then
 mob = RPD.mob("IceSkeleton")
-local level = RPD.Dungeon.level
 mob:setPos(pos-1)
 level:spawnMob(mob)
 mob:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )

@@ -69,7 +69,7 @@ return actor.init({
             max = math.floor(L / 100)
         end
         now = 0
-        local level = RPD.Dungeon.level
+
         for i = 0, L - 1 do
             if RPD.Actor:findChar(i) then
                 now = now + 1

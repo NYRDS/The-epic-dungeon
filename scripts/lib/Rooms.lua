@@ -104,7 +104,7 @@ BlueWomb = BlueWomb,
 -- создание границ
 MakeBorder = function()
 local level = RPD.Dungeon.level
-for i = 0,RPD.Dungeon.level:getLength()-1 do           
+for i = 0,RPD.Dungeon.level:getLength()-1 do
 if i <= level:getWidth() then
 level:set(i, RPD.Terrain.WALL )
 RPD.GameScene:updateMap(i)

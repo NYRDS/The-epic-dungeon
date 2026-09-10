@@ -28,9 +28,9 @@ end
 equipable     = "left_hand"
         }
     end,
-    actions = function(self,item,hero) 
+    actions = function(self,item,hero)
 if item:isEquipped(RPD.Dungeon.hero) then
-return {RPD.StringsManager:maybeId("Fire"),("ЗАРЯДИТЬ("..present.."/"..can3..")")} 
+return {RPD.StringsManager:maybeId("Fire"),("ЗАРЯДИТЬ("..present.."/"..can3..")")}
 else
 return {("ЗАРЯДИТЬ("..present.."/"..can3..")")}
     end
@@ -45,7 +45,7 @@ p = item:getUser():speed()
 if hero:effectiveSTR() < 11-item:level() then
 hero:speed(hero:speed()-(11-hero:effectiveSTR()))
 end
-end    
+end
     end,
 
     deactivate = function(self, item, hero)

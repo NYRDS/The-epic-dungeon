@@ -30,7 +30,7 @@ end,
 
 actions = function(self,item,hero)
 if item:isEquipped(RPD.Dungeon.hero) then
-return {RPD.StringsManager:maybeId("Fire"),("ЗАРЯДИТЬ("..now.."/"..get..")")} 
+return {RPD.StringsManager:maybeId("Fire"),("ЗАРЯДИТЬ("..now.."/"..get..")")}
 else
 return {("ЗАРЯДИТЬ("..now.."/"..get..")")}
 end

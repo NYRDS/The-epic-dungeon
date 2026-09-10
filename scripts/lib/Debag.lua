@@ -28,7 +28,7 @@ end,
 receiveItem = function()
 item = Server:receiveData()
 sep = "%s"
-t={} 
+t={}
 i=1
 for str in string.gmatch(item, "([^"..sep.."]+)") do
 t[i] = str
@@ -52,7 +52,7 @@ end,
 receiveAttack = function()
 attack = Server:receiveData()
 sep = "%s"
-t={} 
+t={}
 i=1
 for str in string.gmatch(attack, "([^"..sep.."]+)") do
 t[i] = str
@@ -60,7 +60,7 @@ i = i + 1
 end
 if t[1] == Cstats then
 if t[2] == "attack" then
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
+for i = 1,RPD.Dungeon.level:getLength()-1 do
 local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() == "Heroes/Player" then
 maybeMob:getSprite():attack(maybeMob:getPos()+1)
@@ -91,7 +91,7 @@ msg = Server:receiveData()
 --RPD.glog(msg)
 --расшифровка в массив
 sep = "%s"
-t={} 
+t={}
 i=1
 for str in string.gmatch(msg, "([^"..sep.."]+)") do
 t[i] = str
@@ -100,7 +100,7 @@ end
 -- проверка мне ли оно
 if t[1] == Cstats and t[2] == "hero" then
 -- спавн если нет, передвижение если нет и открытие следующего уровня для User.player
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
+for i = 1,RPD.Dungeon.level:getLength()-1 do
 local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() == "Heroes/Player" then
 if t[5] ~= tostring(RPD.Dungeon.depth) then
@@ -163,7 +163,7 @@ level = Server:receiveData()
 --RPD.glog(level)
 -- обработка в массив
 sep = "%s"
-t={} 
+t={}
 i=1
 for str in string.gmatch(level, "([^"..sep.."]+)") do
 t[i] = str
@@ -184,7 +184,7 @@ RPD.GameScene:updateMap(i)
 end
 -- удаление мобов и предметов
 if Cstats == User.player then
-for i = 0,RPD.Dungeon.level:getLength()-1 do         
+for i = 0,RPD.Dungeon.level:getLength()-1 do
 local item = RPD.Dungeon.level:getHeap(i)
 if item then
 item:pickUp()
@@ -220,7 +220,7 @@ end,
 receiveDie = function()
 die = Server:receiveData()
 sep = "%s"
-t={} 
+t={}
 i=1
 for str in string.gmatch(die, "([^"..sep.."]+)") do
 t[i] = str
@@ -229,7 +229,7 @@ end
 if t[1] == Cstats then
 if t[2] == "true" then
 RPD.glog("-- Ваш товарищ скончался.")
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
+for i = 1,RPD.Dungeon.level:getLength()-1 do
 local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() == "Heroes/Player" then
 maybeMob:die()

@@ -1,7 +1,7 @@
 local RPD = require "scripts/lib/epicClasses"
 
 return {
-addObject(top,bottom,cell)
+addObject = function(top,bottom,cell)
 local W = RPD.Dungeon.level:getWidth()
 local top =
 {

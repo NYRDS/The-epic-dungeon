@@ -106,7 +106,7 @@ RPD.glog(RPD.StringsManager:maybeId("NoBullets"))
 end
 end
 if action == RPD.StringsManager:maybeId("Fire") then
-item:selectCell( RPD.StringsManager:maybeId("Fire") ,RPD.StringsManager:maybeId("Select_A_Cage")")
+item:selectCell( RPD.StringsManager:maybeId("Fire") ,RPD.StringsManager:maybeId("Select_A_Cage"))
 end
 end,
 

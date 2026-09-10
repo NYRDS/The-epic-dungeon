@@ -43,10 +43,6 @@ local buffs = {
 "Ratcatcher",
 "Guard",
 
--- multiplayer
-"Multiplayer_host",
-"Multiplayer_player",
-
 -- hero classes
 
 -- potions

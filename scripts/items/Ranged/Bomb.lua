@@ -19,7 +19,7 @@ return item.init{
             info      = RPD.StringsManager:maybeId("Bomb_Info"),
             stackable = true,
             upgradable    = true,
- 
+
              price     = 45
         }
     end,
@@ -35,7 +35,7 @@ local level = RPD.Dungeon.level
             for j = y - 1*(item:level()+1), y + 1*(item:level()+1) do
 local pos = level:cell(i,j)
 local soul =  RPD.Actor:findChar(pos)
-            if soul then 
+            if soul then
 RPD.Sfx.CellEmitter:get(pos):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STEAM ), 7);
 soul:damage(10*(item:level()+1),RPD.Dungeon.hero)
 return dmg
@@ -43,7 +43,7 @@ else
 RPD.Sfx.CellEmitter:get(pos):burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.STEAM ), 7);
               end
         end
-    end 
+    end
         end
     end,
     bag = function(self, item)

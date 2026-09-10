@@ -25,7 +25,7 @@ detach = function(self, buff)
 end,
 act = function(self,buff)
 buff:detach()
-end, 
+end,
 charAct = function(self,buff)
 if buff.target:hp() <= 5 then
 buff.target:hp(buff.target:ht())

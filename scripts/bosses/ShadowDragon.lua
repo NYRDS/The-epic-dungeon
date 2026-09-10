@@ -20,7 +20,7 @@ local y = level:cellY(cell)
         local pos = level:cell(i,j)
         local soul =  RPD.Actor:findChar(pos)
         RPD.zapEffect(self:getPos(),pos, "Shadow")
-            if soul then 
+            if soul then
             RPD.Sfx.CellEmitter:get(pos):start(RPD.Sfx.ShadowParticle.UP, 0.02, 20)
             RPD.affectBuff(soul, RPD.Buffs.Poison , 10);
             RPD.affectBuff(soul, RPD.Buffs.Vertigo , 10);

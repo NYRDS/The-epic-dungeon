@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 local isPlaying = false
 
-return mob.init({ 
+return mob.init({
     act = function(self)
          if self:getState():getTag() == "HUNTING" then
              if not isPlaying then
@@ -26,7 +26,7 @@ end,
     damage = function(self, enemy, dmg) -- ranged attack
 self:getSprite():emitter():pour( RPD.Sfx.ShadowParticle.UP, 0.8 )
 end,
-    zapProc = function(self, enemy, dmg) 
+    zapProc = function(self, enemy, dmg)
             RPD.placeBlob( RPD.Blobs.LiquidFlame, enemy:getPos(), 50)
         end,
 die = function(self, cause)

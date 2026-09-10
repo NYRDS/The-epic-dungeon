@@ -12,7 +12,7 @@ local mob = require"scripts/lib/mob"
 return mob.init{
 damage = function(self, enemy)
 RPD.zapEffect(self:getPos(), self:getPos(), "Ice")
-end, 
+end,
 attackProc = function(self, enemy, dmg)
 RPD.Sfx.SpellSprite:show(self, RPD.Sfx.SpellSprite.MAP)
 return dmg

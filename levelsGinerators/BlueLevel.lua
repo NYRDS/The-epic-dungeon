@@ -1,4 +1,4 @@
-local table = 
+local table =
 {
 kind = "Womb",
 Entrance = "CavesEntrance",
@@ -7,7 +7,7 @@ Exit = "CavesExit",
 ExitHeigth = 4,
 ExitWidth = 4,
 RoomHeigth = 7,
-RoomWidth = 7, 
+RoomWidth = 7,
 RandRooms = {"BlueZombies","BlueBalls","BlueHeart","BlueHeartCastl","BlueChaos","BlueGoo","BlueGooLasherRoom","RedGoo","RedGooLasherRoom","BlueChasm","BlueAlhimy","BlueLibrary","BlueStatue"},
 --RandRooms = {"SpinnerNest"},
 HasBase = false,

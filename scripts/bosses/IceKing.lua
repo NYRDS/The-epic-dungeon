@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 local isPlaying = false
 
-return mob.init({ 
+return mob.init({
     act = function(self)
          if self:getState():getTag() == "HUNTING" then
              if not isPlaying then
@@ -22,7 +22,7 @@ return mob.init({
     end,
 zapProc = function(self, enemy,dmg)
 RPD.affectBuff(enemy, RPD.Buffs.Frost,4)
-local mob = RPD.mob("IceGaurd") 
+local mob = RPD.mob("IceGaurd")
 mob:setPos(self:getPos()-2)
 RPD.Dungeon.level:spawnMob(mob)
 local mob = RPD.mob("IceGaurd")

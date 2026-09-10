@@ -172,7 +172,7 @@ local dialog3 = function(index)
     if index == 0 then
 BuyItem(Weapon14_,5*Weapon14:price(),0)
     end
-    
+
     if index == 1 then
 BuyItem(Weapon3_,5*Weapon3:price(),0)
     end

@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 local function zapEffect(me,enemy)
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 

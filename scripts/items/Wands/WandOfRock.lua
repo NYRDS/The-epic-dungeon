@@ -13,14 +13,14 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 local TIME_TO_ZAP = 1
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
            image     = 5,
             name      = RPD.StringsManager:maybeId("WandOfRock_Name"),
             info      = RPD.StringsManager:maybeId("WandOfRock_Info")
         }
-end, 
+end,
 
     activate = function(self, item, hero)
                 RPD.removeBuff(item:getUser(), "RockW")
@@ -49,7 +49,7 @@ local level = RPD.Dungeon.level
             for j = y - 1-l, y + 1+l do
             local pos = level:cell(i,j)
  local soul =  RPD.Actor:findChar(pos)
-            if soul then 
+            if soul then
 RPD.affectBuff(soul, RPD.Buffs.Paralysis , 10*(l+1))
         soul:damage(RPD.Dungeon.depth+(l*2), thisItem:getUser())
 if not level.solid[pos] then

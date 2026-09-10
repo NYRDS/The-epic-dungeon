@@ -35,8 +35,8 @@ if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL_DECO then
 RPD.GameScene:particleEffect("Torch", i-1)
 end
 end
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" and RPD.Dungeon.depth ~= 14 then
 RPD.topEffect(i,"DarckKeeper")
 maybeMob:getSprite():killAndErase()
@@ -44,8 +44,8 @@ end
 end
 local keepers = {"DarckKeeper","DarkShopkeeper1","DarkShopkeeper2"}
 if RPD.Dungeon.depth == 14 then
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,keepers[math.random(1,#keepers)])
 maybeMob:getSprite():killAndErase()

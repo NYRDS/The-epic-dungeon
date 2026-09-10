@@ -33,11 +33,11 @@ buy("Candles/RatCandle",5,300)
     if index == 2 then
 buy("Candles/CaretakersCandle",5,400)
     end
-    
+
     if index == 3 then
 buy("Candles/FireCandle",5,500)
     end
-    
+
     if index == 4 then
 buy("Candles/Candle",5,100)
     end

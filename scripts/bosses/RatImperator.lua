@@ -9,7 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init({ 
+return mob.init({
 act       = function(me, ai, mee)
 if me:canAttack(RPD.Dungeon.hero) then
 me:getSprite():attack(RPD.Dungeon.hero:getPos())
@@ -33,7 +33,7 @@ elseif math.random(1,3) == 1 then
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
 if math.random(1,120) == 1 then
-local mob = RPD.mob("Rat") 
+local mob = RPD.mob("Rat")
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 me:getSprite():zap(i-1)
@@ -58,7 +58,7 @@ local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()+1, true, true, true)
 local enemy = RPD.Actor:findChar(dst)
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
-missile:size(6); 
+missile:size(6);
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then
 enemy:damage(math.random(5,15),me)
@@ -68,7 +68,7 @@ local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()-1, true, true, true)
 local enemy = RPD.Actor:findChar(dst)
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
-missile:size(6); 
+missile:size(6);
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then
 enemy:damage(math.random(5,15),me)
@@ -78,7 +78,7 @@ local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()+RPD.Dungeon.level:getWid
 local enemy = RPD.Actor:findChar(dst)
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
-missile:size(6); 
+missile:size(6);
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then
 enemy:damage(math.random(5,15),me)
@@ -88,7 +88,7 @@ local dst = RPD.Ballistica:cast(me:getPos(),me:getPos()-RPD.Dungeon.level:getWid
 local enemy = RPD.Actor:findChar(dst)
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset(me:getPos(),dst,RPD.Util.nullCallback)
-missile:size(6); 
+missile:size(6);
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 if enemy and enemy ~= me then
 enemy:damage(math.random(5,15),me)

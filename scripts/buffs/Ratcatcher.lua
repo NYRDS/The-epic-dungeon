@@ -27,7 +27,7 @@ detach = function(self, buff)
 end,
 act = function(self,buff)
 buff:detach()
-end, 
+end,
 charAct = function(self,buff)
 if buff.target:hp() <= 20 then
 if not storage.get("waess") then

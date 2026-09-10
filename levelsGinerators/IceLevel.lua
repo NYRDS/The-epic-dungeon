@@ -1,4 +1,4 @@
-local table = 
+local table =
 {
 kind = "Caves",
 Entrance = "CavesEntrance",
@@ -7,7 +7,7 @@ Exit = "CavesExit",
 ExitHeigth = 4,
 ExitWidth = 4,
 RoomHeigth = 7,
-RoomWidth = 7, 
+RoomWidth = 7,
 RandRooms = {"IceBigCave","SmallCave","IceCave","IceLibrary","IceAlhimy","IceRiches","IceRiches","IceRiches","IceRiches","IceArmory","FrozenGnolls","IceVerticalCave","IceTemple","IceRoomHorizontal","IceCavesStatue","IceCrystal","IceNecropolis","IceNefritCastle","ThimogorsCastle","IceTomb","IceFishbowl"},
 --RandRooms = {"IceNefritCastle"},
 HasBase = false,

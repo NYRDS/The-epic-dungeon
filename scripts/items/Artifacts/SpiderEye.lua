@@ -19,7 +19,7 @@ return item.init{
             info      = RPD.StringsManager:maybeId("SpiderEye_Info"),
             stackable = true,
             upgradable    = true,
- 
+
              price     = 30
         }
     end

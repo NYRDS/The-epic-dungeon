@@ -19,7 +19,7 @@ dstr = 0
 --dst = 0
 --[[
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)          
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 76 then
 if RPD.Dungeon.level:distance(me:getPos(),i) == 1 then
 maybeMob:damage(math.random(30,60),me)
@@ -36,14 +36,14 @@ end
 end
 if i == RPD.Dungeon.level:getLength()-2 then
 me:spend(1)
-end  == RPD.Actor:findChar(RPD.Ballistica:cast(me:getPos(),nearestSelf:getPos(),true,true,true))  
+end  == RPD.Actor:findChar(RPD.Ballistica:cast(me:getPos(),nearestSelf:getPos(),true,true,true))
 end getNearestEnemy
 --]]
 
 
 
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)        
+local maybeMob = RPD.Actor:findChar(i)
 dstr = dst
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob ~= me then
 dst = RPD.Dungeon.level:distance(me:getPos(),i)
@@ -63,13 +63,13 @@ me:getSprite():attack(mob:getPos() )
 RPD.playSound( "snd_hit.ogg" )
 
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)        
+local maybeMob = RPD.Actor:findChar(i)
 if mob then
 break
 end
 if i == RPD.Dungeon.level:getLength()-2 then
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)        
+local maybeMob = RPD.Actor:findChar(i)
 dstr = dst
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob ~= me then
 dst = RPD.Dungeon.level:distance(me:getPos(),i)
@@ -83,7 +83,7 @@ end
 mob = nearestSelf
 end
 end
- 
+
 RPD.topEffect(mob:getPos(),"Debag")
 me:spend(1)
 else

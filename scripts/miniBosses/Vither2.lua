@@ -31,12 +31,12 @@ return mob.init({
 
             if level:cellValid(mobPos) then
                 mob:setPos(mobPos)
-                
+
                 level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
                 self:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
                 mob:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
                 RPD.playSound( "snd_cursed.mp3" )
-            end 
+            end
  end
         self:yell("Нееет!")
  end

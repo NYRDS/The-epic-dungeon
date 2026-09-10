@@ -29,7 +29,7 @@ return true
     end,
     act = function(self,buff)
         buff:detach()
-end, 
+end,
     charAct = function(self,buff)
 
 local levelSize = RPD.Dungeon.level:getLength()

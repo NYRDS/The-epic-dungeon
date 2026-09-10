@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-zapProc = function(self, enemy, dmg) 
+zapProc = function(self, enemy, dmg)
 RPD.placeBlob( RPD.Blobs.Web, enemy:getPos(), 2)
 missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset( self:getPos(),enemy:getPos(),RPD.Util.nullCallbackk)

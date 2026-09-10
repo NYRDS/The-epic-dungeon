@@ -26,7 +26,7 @@ return item.init{
     actions = function() return {RPD.StringsManager:maybeId("Activate")} end,
 
     execute = function(self, item, hero, action)
-        if action == RPD.StringsManager:maybeId("Activate") then 
+        if action == RPD.StringsManager:maybeId("Activate") then
 item:getUser():spend(1)
    RPD.affectBuff(RPD.Dungeon.hero, "LightShild" , 10+item:level())
    item:detach(RPD.Dungeon.hero:getBelongings().backpack)

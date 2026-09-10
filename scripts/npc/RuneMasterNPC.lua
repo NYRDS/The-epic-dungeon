@@ -64,7 +64,7 @@ return mob.init({
                 RPD.StringsManager:maybeId("RuneMasterNPC_Phrase8")
         )
     end,
-    spawn = function(self, enemy, dmg) 
+    spawn = function(self, enemy, dmg)
 self:getSprite():emitter():start( RPD.Sfx.FlowParticle.FACTORY, 0.8 )
 
 --[[

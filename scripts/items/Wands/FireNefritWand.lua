@@ -13,14 +13,14 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
            image     = 3,
             name      = RPD.StringsManager:maybeId("FireNefritWand_Name"),
             info      = RPD.StringsManager:maybeId("FireNefritWand_Info")
         }
-end, 
+end,
 
 activate = function(self, item, hero)
 RPD.removeBuff(hero, RPD.Buffs.Light)

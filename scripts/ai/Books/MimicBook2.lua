@@ -15,7 +15,7 @@ me:getSprite():idle()
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) < 5 then
 
 local top = function(from,to)
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 local factor = RPD.Dungeon.level:distance(from,to)
@@ -25,7 +25,7 @@ mob:destroy()
 end
 
 local bottom = function(from,to)
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 local factor = RPD.Dungeon.level:distance(from,to)

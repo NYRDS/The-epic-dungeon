@@ -28,7 +28,7 @@ return true
     end,
     act = function(self,buff)
         buff:detach()
-end, 
+end,
    charAct = function(self,buff)
 if math.random(1,4) == 1 and RPD.Dungeon.hero:getNearestEnemy() then
 local x = RPD.Dungeon.level:cellX(buff.target:getPos())
@@ -38,7 +38,7 @@ local y = RPD.Dungeon.level:cellY(buff.target:getPos())
 local pos = RPD.Dungeon.level:cell(i,j)
 local soul =  RPD.Actor:findChar(pos-1)
 if RPD.Dungeon.level.map[pos] == RPD.Terrain.EMPTY then
-if soul and soul ~= buff.target then 
+if soul and soul ~= buff.target then
 RPD.topEffect(pos-1,"ShadowTentacle")
 soul:damage(math.random(25,60), buff.target)
  else

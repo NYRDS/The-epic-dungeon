@@ -9,7 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init({ 
+return mob.init({
 zapProc = function(self, enemy, cell)
 return dmg
 end

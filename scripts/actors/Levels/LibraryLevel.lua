@@ -32,7 +32,7 @@ local W = level:getWidth()
 for i = 1, level:getLength()-1 do
 if level.map[i] == 4 then
 if not level:getTopLevelObject(i) then
-if 
+if
 level.map[i+W] == 1 or
 level.map[i+W] == 2 or
 level.map[i+W] == 3 or
@@ -128,8 +128,8 @@ end
 end
 end
 
-for i = 1,RPD.Dungeon.level:getLength()-1 do       
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,"LibraryKeeper")
 maybeMob:getSprite():killAndErase()

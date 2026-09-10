@@ -1,5 +1,5 @@
 local RPD = require "scripts/lib/commonClasses"
-local table = 
+local table =
 {
 kind = "Castle",
 Entrance = "Entrance",

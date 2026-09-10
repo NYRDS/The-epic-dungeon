@@ -5,16 +5,16 @@ local DungeonTileMap = luajava.bindClass("com.watabou.pixeldungeon.DungeonTilema
 local LightRay = {
     ray = function(from, to)
         RPD.playSound( "snd_ray" )
-        
+
         local image = RPD.new("com.watabou.noosa.Image", "effects/YellowRay.png")
-        
+
         local A = 180 / math.pi
 
         local s = DungeonTileMap:tileCenterToWorld(from)
         local e = DungeonTileMap:tileCenterToWorld(to)
 
         image.origin:set(0, image.height / 2)
-        
+
         image:setPos(s.x,s.y-7)
 
         local dx = e.x - s.x

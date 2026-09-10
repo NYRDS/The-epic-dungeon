@@ -43,5 +43,5 @@ local mobs = {
 level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero));
 return true
     end
-   end 
+   end
 }

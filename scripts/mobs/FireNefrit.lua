@@ -13,7 +13,7 @@ return mob.init{
     damage = function(self, enemy, dmg)
 self:getSprite():emitter():pour( RPD.Sfx.ShadowParticle.UP, 0.8 )
 end,
-    zapProc = function(self, enemy, dmg) 
+    zapProc = function(self, enemy, dmg)
             RPD.placeBlob( RPD.Blobs.Fire, enemy:getPos(), 10)
             end
 }

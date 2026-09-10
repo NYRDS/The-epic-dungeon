@@ -15,7 +15,7 @@ local storage = require "scripts/lib/storage"
 
 local ratcandle
 
-return wand.init{ 
+return wand.init{
     desc  = function(self, item)
 ratcandle = item
         return {
@@ -25,7 +25,7 @@ ratcandle = item
         equipable     = "left_hand",
         upgradable    = true
         }
-end, 
+end,
 
 actions = function()
 return {}

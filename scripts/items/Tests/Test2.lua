@@ -23,11 +23,11 @@ return item.init{
     end,
     onThrow = function(self, item, cell)
         local level = RPD.Dungeon.level
-     
+
         if level.map[cell] then
             local mob = RPD.mob("LaserSolder")
     mob:setPos(cell)
-      level:spawnMob(mob)     
+      level:spawnMob(mob)
         else
             item:dropTo(cell)
         end

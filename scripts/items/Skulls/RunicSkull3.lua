@@ -27,7 +27,7 @@ return item.init{
         if level.map[cell] then
             local mob = RPD.mob("RunicSkull3")
             mob:setPos(cell)
-      level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))     
+      level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
         else
             item:dropTo(cell)
         end

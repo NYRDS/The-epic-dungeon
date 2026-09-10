@@ -13,7 +13,7 @@ local mob = require"scripts/lib/mob"
 
 local storage = require "scripts/lib/storage"
 
-return mob.init({ 
+return mob.init({
 act       = function(me, ai, mee)
 if not storage.get("phrase1") then
 EPD.showQuestWindow(me,RPD.StringsManager:maybeId("NightmareKingOnThrone_Phrase1"))

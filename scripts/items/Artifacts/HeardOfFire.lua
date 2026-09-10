@@ -19,11 +19,11 @@ return item.init{
             info      = RPD.StringsManager:maybeId("HeardOfFire_Info"),
             stackable = true,
             upgradable    = false,
- 
+
              price     = 50,
             isArtifact    = true
         }
-    end,   
+    end,
 activate = function(self, item, hero)
 if RPD.Dungeon.hero ~= nil then
 self.data.activationCount = (self.data.activationCount or 0) + 1

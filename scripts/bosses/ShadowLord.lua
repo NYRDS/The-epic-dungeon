@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 local isPlaying = false
 
-return mob.init({ 
+return mob.init({
     act = function(self)
          if self:getState():getTag() == "HUNTING" then
              if not isPlaying then
@@ -36,7 +36,7 @@ if math.random(1,5) == 5 then
             local mob = RPD.mob("Wraith")
             local pos = level:getEmptyCellNextTo(self:getPos())
             if (level:cellValid(pos)) then
-                mob:setPos(pos) level:spawnMob(mob)     
+                mob:setPos(pos) level:spawnMob(mob)
             end
         end
 end

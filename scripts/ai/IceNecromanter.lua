@@ -11,7 +11,7 @@ local ai = require "scripts/lib/ai"
 return ai.init{
 
     act       = function(me, ai, me)
-    
+
 cell = 1
 pos = 1
 while(true) do
@@ -35,7 +35,7 @@ local storage = require "scripts/lib/storage"
 
 
 if not storage.get("ttt") then
-storage.put("ttt",true) 
+storage.put("ttt",true)
     for i = 1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.PEDESTAL then
 local mob = RPD.mob("EpicIceRunicSkull")
@@ -50,7 +50,7 @@ end
 if math.random(1,10) == 1 then
 
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)        
+local maybeMob = RPD.Actor:findChar(i)
 
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 70 then
 break

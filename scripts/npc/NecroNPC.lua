@@ -52,7 +52,7 @@ EPD.showQuestWindow(self,RPD.StringsManager:maybeId("NecroNPC_Phrase2"))
 mob:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
 RPD.playSound( "snd_cursed.mp3" )
            end
-        end 
+        end
 self:destroy()
 self:getSprite():killAndErase()
             quest.complete(questName)

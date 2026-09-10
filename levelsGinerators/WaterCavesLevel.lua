@@ -1,4 +1,4 @@
-local table = 
+local table =
 {
 kind = "Caves",
 Entrance = "CavesEntrance",
@@ -7,7 +7,7 @@ Exit = "CavesExit",
 ExitHeigth = 4,
 ExitWidth = 4,
 RoomHeigth = 7,
-RoomWidth = 7, 
+RoomWidth = 7,
 RandRooms = {"WaterCave","BigWaterCave","SmallWaterCave","WaterCavesShasm","GnollLibersPost","WaterCavesLibrary","WaterCavesFishbowl","HydraNest","WaterZombieRoom","WaterCavesBestRoom","WaterCavesBestRoom","WaterCavesBestRoom","WaterCavesRuins","ToxicRotHeartRoom","WaterOfiuraRoom","WaterCavesStatueRoom"},
 HasBase = false,
 Items = {"Ration"},

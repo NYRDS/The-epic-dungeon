@@ -13,21 +13,21 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 local TIME_TO_ZAP = 1
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
            image     = 6,
             name      = RPD.StringsManager:maybeId("WandOfBlast_Name"),
             info      = RPD.StringsManager:maybeId("WandOfBlast_Info")
         }
-end, 
+end,
 
     activate = function(self, item, hero)
                 RPD.removeBuff(item:getUser(), "PoisonW")
 
         RPD.permanentBuff(item:getUser(), "PoisonW")
     end,
- 
+
     deactivate = function(self, item, hero)
             RPD.removeBuff(item:getUser() ,"PoisonW")
     end,

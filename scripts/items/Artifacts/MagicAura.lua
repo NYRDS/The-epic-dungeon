@@ -50,17 +50,17 @@ return item.init{
             info      = RPD.StringsManager:maybeId("MagicAura_Info"),
             stackable = false,
             upgradable    = false,
- 
+
              price     = 50
         }
     end, actions = function() return {RPD.Actions.zap} end,
-    execute = function(self, item, hero, action, cell, char, data) 
-        if action == RPD.Actions.zap then       
+    execute = function(self, item, hero, action, cell, char, data)
+        if action == RPD.Actions.zap then
         local hero = RPD.Dungeon.hero
           if cloud == nil then
 cloud = hero:getSprite():emitter()
 cloud:pour(RPD.Sfx.Speck:factory(effect[math.random(29)]), 0.1)
-    end      
-  end 
-end 
+    end
+  end
+end
 }

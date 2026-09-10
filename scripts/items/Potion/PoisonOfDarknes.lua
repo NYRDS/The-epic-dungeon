@@ -19,17 +19,17 @@ return item.init{
             info      = RPD.StringsManager:maybeId("PoisonOfDarknes_Info"),
             stackable = true,
             upgradable    = true,
- 
+
              price     = 30,
 defaultAction = RPD.Actions.drink
         }
-    end, 
+    end,
     actions = function() return {RPD.Actions.drink} end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.drink then
 item:getUser():spend(1)
 RPD.Buffs.Buff:affect(hero, RPD.Buffs.Poison, 10)
-item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+item:detach(RPD.Dungeon.hero:getBelongings().backpack)
         end
     end,
     onThrow = function(self, item, cell)

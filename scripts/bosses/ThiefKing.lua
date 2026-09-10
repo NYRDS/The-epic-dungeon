@@ -25,7 +25,7 @@ local zapEffect =
 local data
 local isPlaying = false
 
-return mob.init({ 
+return mob.init({
     act = function(self)
          if self:getState():getTag() == "HUNTING" then
              if not isPlaying then

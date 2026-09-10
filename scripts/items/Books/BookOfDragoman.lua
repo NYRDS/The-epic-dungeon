@@ -26,7 +26,7 @@ return item.init{
          --   isArtifact    = true,
 defaultAction = RPD.StringsManager:maybeId("Action_Use")
         }
-    end,   
+    end,
 activate = function(self, item, hero)
 --                RPD.removeBuff(item:getUser(), "Butterflys")
 
@@ -42,7 +42,7 @@ activate = function(self, item, hero)
             return {RPD.StringsManager:maybeId("Action_Use")}
         end
     end,
-    
+
 cellSelected = function(self, thisItem, action, cell)
 local dialog = function(index)
 if index == 0 then

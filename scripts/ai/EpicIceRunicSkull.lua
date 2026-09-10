@@ -36,12 +36,12 @@ end
 me:spend(4)
 elseif math.random(1,10) == 1 then
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)        
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 180 then
 for i = 1,math.random(1,3) do
 local pos = RPD.Dungeon.level:getEmptyCellNextTo(maybeMob:getPos())
 if (RPD.Dungeon.level:cellValid(pos)) then
-local mob = RPD.mob("IceSkeleton") 
+local mob = RPD.mob("IceSkeleton")
 mob:setPos(pos)
 RPD.Dungeon.level:spawnMob(mob)
 mob:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.BONE ), 7);

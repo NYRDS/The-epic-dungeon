@@ -34,7 +34,7 @@ return item.init{
             isArtifact    = true,
             price     = 0
              }
-    end,   
+    end,
     actions = function(self, item,  hero)
             return {RPD.StringsManager:maybeId("Absorb")}
     end,

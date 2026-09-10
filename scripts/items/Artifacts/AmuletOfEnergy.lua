@@ -25,7 +25,7 @@ return item.init{
            isArtifact    = true,
 defaultAction = RPD.StringsManager:maybeId("Action_Use")
         }
-    end,   
+    end,
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
             return {RPD.StringsManager:maybeId("Action_Use")}
@@ -62,7 +62,7 @@ local level = RPD.Dungeon.level
             for j = y - 1-l, y + 1+l do
             local pos = level:cell(i,j)
  local soul =  RPD.Actor:findChar(pos)
-            if soul and soul ~= RPD.Dungeon.hero then 
+            if soul and soul ~= RPD.Dungeon.hero then
 soul:damage(60*l,RPD.Dungeon.hero)
 soul:getSprite():emitter():start(RPD.Sfx.EnergyParticle.FACTORY, 0.02,4)
 if not level.solid[pos] then

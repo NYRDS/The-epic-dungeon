@@ -26,7 +26,7 @@ return item.init{
          --   isArtifact    = true,
               defaultAction = RPD.StringsManager:maybeId("Action_Use")
         }
-    end,   
+    end,
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
             return {RPD.StringsManager:maybeId("Action_Use")}

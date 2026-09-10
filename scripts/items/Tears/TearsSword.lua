@@ -97,7 +97,7 @@ if weapon == it and stats ~= sword then
 stats = sword
 hero:overrideSpriteLayer("right_hand_item",sword)
 pcall(function() hero:updateSprite() end)
-elseif weapon ~= it and stats == sword then 
+elseif weapon ~= it and stats == sword then
 stats = nil
 hero:overrideSpriteLayer("right_hand_item",nil)
 pcall(function() hero:updateSprite() end)

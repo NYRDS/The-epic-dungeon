@@ -53,7 +53,7 @@ mob:setPos(cells[i])
     end,
     act = function(self,buff)
     buff:detach()
-    end, 
+    end,
     attachTo = function(self, buff, target)
     d = storage.get("d_black_heart") or math.random(0,1)
     storage.put("d_black_heart",d)
@@ -63,7 +63,7 @@ mob:setPos(cells[i])
     charAct = function(self,buff)
     local radius = storage.get("radius_black_heart") or 0
     local cell = buff.target:getPos()
-    
+
 for i = 1, #emitters do
 emitters[i].on = false
 end

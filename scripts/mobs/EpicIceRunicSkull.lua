@@ -9,7 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init({ 
+return mob.init({
 act       = function(me)
 if math.random(1,3) == 1 then
 local cell = RPD.Ballistica:cast(me:getPos(),RPD.Dungeon.hero:getPos(),true,true,true)
@@ -35,12 +35,12 @@ end
 me:spend(3)
 elseif math.random(1,10) == 1 then
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)        
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() == "Bosses/IceNecromanter" then
 for i = 1,math.random(1,3) do
 local pos = RPD.Dungeon.level:getEmptyCellNextTo(maybeMob:getPos())
 if (RPD.Dungeon.level:cellValid(pos)) then
-local mob = RPD.mob("IceSkeleton") 
+local mob = RPD.mob("IceSkeleton")
 mob:setPos(pos)
 RPD.Dungeon.level:spawnMob(mob)
 mob:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.BONE ), 7);

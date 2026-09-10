@@ -17,7 +17,7 @@ local wand
 local st
 local ittt
 
-return wandlib.init{ 
+return wandlib.init{
     desc  = function(self, item)
 ittt = item
         return {
@@ -25,7 +25,7 @@ ittt = item
         name      = RPD.StringsManager:maybeId("TearsWand_Name"),
         info      = RPD.StringsManager:maybeId("TearsWand_Info")
         }
-end, 
+end,
 
 image = function()
 if ittt:level() > 5 then
@@ -71,7 +71,7 @@ local to = cell
 
 
 top = function()
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -88,7 +88,7 @@ mob:destroy()
 end
 
 top_both = function()
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -105,7 +105,7 @@ mob:destroy()
 end
 
 bottom_both = function()
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -122,7 +122,7 @@ mob:destroy()
 end
 
 bottom = function()
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -157,7 +157,7 @@ end
 if l > 3 then
 local from = user:getPos()
 local to = dst
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -183,7 +183,7 @@ end
 if l > 1 then
 local from = user:getPos()
 local to = dst
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)
@@ -257,7 +257,7 @@ if ittt:isEquipped(hero) and st ~= wand then
 st = wand
 hero:overrideSpriteLayer("left_hand_item",wand)
 pcall(function() hero:updateSprite() end)
-elseif not ittt:isEquipped(hero) and st == wand then 
+elseif not ittt:isEquipped(hero) and st == wand then
 hero:overrideSpriteLayer("left_hand_item",nil)
 pcall(function() hero:updateSprite() end)
 st = nil

@@ -13,24 +13,24 @@ end
 
 local zap = function(from, to)
     local factor = getFactor()
-        
+
     local bolt = RPD.new("com.watabou.pixeldungeon.effects.Halo",4,0xff1d00,0.7)
     local emitter = RPD.Sfx.CellEmitter:get(i)
     emitter:pour(RPD.Sfx.FlameParticle.FACTORY, 0.05)
     emitter.width = 4
     emitter.height = 4
-    
+
     RPD.GameScene:effect(bolt)
-    
+
     local s = DungeonTileMap:tileCenterToWorld(from)
     local e = DungeonTileMap:tileCenterToWorld(to)
 
     bolt:setPos(s.x - 16*4 + math.random(-10,10),s.y - 16*4)
     emitter.x = s.x
     emitter.y = s.y
-        
+
     local c = 1
-    
+
     local g = 1
     if s.x > e.x then
         g = -1
@@ -38,10 +38,10 @@ local zap = function(from, to)
     if s.x == e.x then
         c = 0
     end
-    
+
     local time = s.x-e.x+1
     local d = s.y-e.y+1
-    
+
     g = g*speed
 
     local function update(f)
@@ -63,7 +63,7 @@ local NightmareFires = {
         local s = DungeonTileMap:tileCenterToWorld(from)
         local e = DungeonTileMap:tileCenterToWorld(to)
         local time = s.x-e.x+1
-        
+
         local function update(f)
             if f >= n*math.abs(time)/speed then
                 return false

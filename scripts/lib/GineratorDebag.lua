@@ -97,7 +97,7 @@ level:set(pos, RPD.Terrain.EMPTY )
 RPD.GameScene:updateMap(pos)
 end
 end
-level:set(cell, RPD.Terrain.PEDESTAL) 
+level:set(cell, RPD.Terrain.PEDESTAL)
 RPD.GameScene:updateMap(cell)
 local mob = RPD.mob("CrystalGuard")
 mob:setPos(cell)
@@ -116,7 +116,7 @@ end
 local pos = level:cell(t,j)
 level:set(pos, RPD.Terrain.EMPTY )
 RPD.GameScene:updateMap(pos)
-RPD.placeBlob( RPD.Blobs.Foliage , pos, 50 );   
+RPD.placeBlob( RPD.Blobs.Foliage , pos, 50 );
 end
 end
 else
@@ -184,10 +184,10 @@ Tunel = function(from,cell)
 level = RPD.Dungeon.level
 a = from
 w = level:getWidth()
-a_y = level:cellY(a) 
-cell_y = level:cellY(cell) 
-a_x = level:cellX(a) 
-cell_x = level:cellX(cell) 
+a_y = level:cellY(a)
+cell_y = level:cellY(cell)
+a_x = level:cellX(a)
+cell_x = level:cellX(cell)
 
 set = function(pos)
 --RPD.glog("set empty on cell"..pos)
@@ -196,15 +196,15 @@ if level.map[pos] == RPD.Terrain.CHASM then
 level:set(pos-1, RPD.Terrain.EMPTY_SP)
 --RPD.glog("set empty on cell"..pos)
 end
-if level.map[pos] == RPD.Terrain.WALL then 
+if level.map[pos] == RPD.Terrain.WALL then
 level:set(pos-1,RPD.Terrain.DOOR)
 
 --RPD.glog("set door on cell"..pos)
 end
-if level.map[pos] == RPD.Terrain.BOOKSHELF then 
+if level.map[pos] == RPD.Terrain.BOOKSHELF then
 level:set(pos-1,RPD.Terrain.EMPTY)
 end
-if level.map[pos] == RPD.Terrain.STATUE_SP then 
+if level.map[pos] == RPD.Terrain.STATUE_SP then
 if level.map[pos+1] ~= level.solid[pos] then
 level:set(pos,RPD.Terrain.STATUE_SP)
 level:set(pos-1,RPD.Terrain.EMPTY)
@@ -223,7 +223,7 @@ level:set(pos-1,RPD.Terrain.EMPTY)
 
 end
 end
-if level.map[pos] == RPD.Terrain.STATUE then 
+if level.map[pos] == RPD.Terrain.STATUE then
 if level.map[pos+1] ~= level.solid[pos] then
 level:set(pos,RPD.Terrain.STATUE)
 level:set(pos-1,RPD.Terrain.EMPTY)
@@ -242,7 +242,7 @@ level:set(pos-1,RPD.Terrain.EMPTY)
 
 end
 end
-if level.map[pos] == RPD.Terrain.ALCHEMY then 
+if level.map[pos] == RPD.Terrain.ALCHEMY then
 if level.map[pos+1] ~= level.solid[pos] then
 level:set(pos,RPD.Terrain.ALCHEMY)
 level:set(pos-1,RPD.Terrain.EMPTY_SP)
@@ -271,15 +271,15 @@ if cell_x ~= a_x then
 if cell_x > a_x then
 set(a)
 a = a + 1
-a_y = level:cellY(a) 
-a_x = level:cellX(a) 
+a_y = level:cellY(a)
+a_x = level:cellX(a)
 set(a)
 end
 if cell_x < a_x then
 set(a)
 a = a -1
 a_y = level:cellY(a)
-a_x = level:cellX(a) 
+a_x = level:cellX(a)
 set(a)
 end
 end
@@ -288,16 +288,16 @@ if cell_y ~= a_y then
 if cell_y > a_y then
 set(a)
 a = a + w
-a_y = level:cellY(a) 
-a_x = level:cellX(a) 
+a_y = level:cellY(a)
+a_x = level:cellX(a)
 set(a)
 
 end
 if cell_y < a_y then
 set(a)
 a = a - w
-a_y = level:cellY(a) 
-a_x = level:cellX(a) 
+a_y = level:cellY(a)
+a_x = level:cellX(a)
 set(a)
 
 end
@@ -560,7 +560,7 @@ BlueWomb = BlueWomb,
 MakeBorder = function()
 local level = RPD.Dungeon.level
 local W = level:getWidth()
-for i = 0,RPD.Dungeon.level:getLength()-1 do           
+for i = 0,RPD.Dungeon.level:getLength()-1 do
 if i <= W then
 level:set(i, RPD.Terrain.WALL )
 RPD.GameScene:updateMap(i)
@@ -733,10 +733,10 @@ end
 for i = 1, RPD.Dungeon.level:getLength() do
 if i ~= RPD.Dungeon.level:getLength() then
 if level.map[i] == RPD.Terrain.WALL or level.map[i] == RPD.Terrain.DOOR or level.map[i] == RPD.Terrain.LOCKEDDOOR or level.map[i] == RPD.Terrain.WALL_DECO then
-if 
-level.map[i+W] == RPD.Terrain.WATER or 
-level.map[i+W] == RPD.Terrain.WATER_TILES or 
-level.water[W+i] 
+if
+level.map[i+W] == RPD.Terrain.WATER or
+level.map[i+W] == RPD.Terrain.WATER_TILES or
+level.water[W+i]
 then
 RPD.createLevelObject({
     kind="CustomObject",

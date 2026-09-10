@@ -15,7 +15,7 @@ local storage = require "scripts/lib/storage"
 
 local caretakerscandle
 
-return wand.init{ 
+return wand.init{
     desc  = function(self, item)
 caretakerscandle = item
         return {
@@ -23,7 +23,7 @@ caretakerscandle = item
         name      = RPD.StringsManager:maybeId("CaretakersCandle_Name"),
         info      = RPD.StringsManager:maybeId("CaretakersCandle_Info")
         }
-end, 
+end,
 
 actions = function()
 return {}
@@ -71,8 +71,8 @@ local Terror = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Terror")
 local Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare")
 if math.random(1,10) == 1 then
 for i = 1,RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)          
-if maybeMob and RPD.Dungeon.level.fieldOfView[i] and maybeMob ~= RPD.Dungeon.hero then 
+local maybeMob = RPD.Actor:findChar(i)
+if maybeMob and RPD.Dungeon.level.fieldOfView[i] and maybeMob ~= RPD.Dungeon.hero then
 RPD.affectBuff(maybeMob, Terror,RPD.Dungeon.hero:magicLvl()+10)
 --test = Flare(5,32)
 --test:color( 0xFF0000, true )

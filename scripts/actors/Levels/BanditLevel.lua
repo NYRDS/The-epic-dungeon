@@ -18,7 +18,7 @@ return actor.init({
         local level = RPD.Dungeon.level
         if RPD.Dungeon.depth ~= 25 then
             Ginerator.CreateLevel("BanditLevel")
-            if not storage.get("Deco") then 
+            if not storage.get("Deco") then
                 storage.put("Deco", true)
                 for i = 1, level:getLength() - 1 do
                     if level.map[i] == 4 then

@@ -22,7 +22,7 @@ return item.init{
             isArtifact    = true,
             price     = 0
              }
-    end,   
+    end,
 
 activate = function(self, item, hero)
 if RPD.Dungeon.hero ~= nil then

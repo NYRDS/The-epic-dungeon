@@ -29,11 +29,11 @@ return item.init{
             info      = "Жезл состоит из цельного куска льда. Не дают растаять ему три кристалла на вершине. При использовании он заморозит всё возле героя.",
             stackable = false,
             upgradable    = false,
- 
+
              price     = 50,
 heapScale = 3.;
              }
-    end, 
+    end,
     image = function()
     return 4.5
     end,
@@ -42,7 +42,7 @@ heapScale = 3.;
  return {RPD.Actions.zap}
 end,
 
-    execute = function(self, item, hero, action, cell, char, data) 
+    execute = function(self, item, hero, action, cell, char, data)
          if action == RPD.Actions.zap then
 
 --local image = RPD.new("com.watabou.noosa.Image","ui/title.png")
@@ -57,6 +57,6 @@ RPD.glog(client:receiveMessage())
 client:stop()
 --]]
 RPD.glog(RPD.Dungeon.levelId)
-end 
-end 
+end
+end
 }

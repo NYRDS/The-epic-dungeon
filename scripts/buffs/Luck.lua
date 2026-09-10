@@ -32,7 +32,7 @@ RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(0,0)})
 ,pos).type = RPD.Heap.Type.MIMIC
 RPD.GameScene:updateMap(pos)
 
-RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(RPD.Dungeon.depth,RPD.Dungeon.depth*4)}) 
+RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(RPD.Dungeon.depth,RPD.Dungeon.depth*4)})
 ,pos).type = RPD.Heap.Type.MIMIC
 RPD.GameScene:updateMap(pos)
 else

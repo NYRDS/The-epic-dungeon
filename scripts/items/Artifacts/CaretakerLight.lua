@@ -13,15 +13,15 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
             image     = 17,
             imageFile = "items/ArtifactsMod.png",
             name      = RPD.StringsManager:maybeId("CaretakerLight_Name"),
             info      = RPD.StringsManager:maybeId("CaretakerLight_Info")
         }
-end, 
+end,
 
 activate = function(self, item, hero)
 RPD.removeBuff(hero, RPD.Buffs.Light)

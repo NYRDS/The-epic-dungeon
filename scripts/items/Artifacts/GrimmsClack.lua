@@ -22,7 +22,7 @@ return item.init{
             isArtifact    = true,
             price     = 0
              }
-    end,   
+    end,
 activate = function(self, item, hero)
 --item:getUser():getSprite():createHeroSpriteDef(RPD.item("ClothArmor"))
 --item:getUser():getSprite():heroUpdated(RPD.Dungeon.hero)

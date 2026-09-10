@@ -31,7 +31,7 @@ RPD.createLevelObject({
     kind="CustomObject",
     object_desc="Table2"
 }
-,138) 
+,138)
         local levelSize = RPD.Dungeon.level:getLength()
         for i = 0 , levelSize - 1 do
             if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY and math.random(1,3) == 1 then

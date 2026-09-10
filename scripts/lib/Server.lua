@@ -25,7 +25,7 @@ then
 if level.map[i+w-1] == RPD.Terrain.EMPTY_SP or
 level.map[i-w-1] == RPD.Terrain.EMPTY_SP or
 level.map[i+w+1] == RPD.Terrain.EMPTY_SP or
-level.map[i-w+1] == RPD.Terrain.EMPTY_SP 
+level.map[i-w+1] == RPD.Terrain.EMPTY_SP
 then
 level:set(i-1,RPD.Terrain.DOOR)
 end

@@ -28,7 +28,7 @@ local bigFungus =
     kind="CustomObject",
     object_desc="NestTile6"
 }
-local smallFungus = 
+local smallFungus =
 {
     kind="CustomObject",
     object_desc="NestTile5"

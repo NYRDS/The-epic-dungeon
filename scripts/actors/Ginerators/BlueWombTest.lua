@@ -19,7 +19,7 @@ if not storage.get("key") then
 
 --подготовка
 local level = RPD.Dungeon.level
-for i = 0,RPD.Dungeon.level:getLength()-1 do           
+for i = 0,RPD.Dungeon.level:getLength()-1 do
 level:set(i, RPD.Terrain.WALL )
 RPD.GameScene:updateMap(i)
 end
@@ -37,7 +37,7 @@ break
 end
 end
 
-d = 1 
+d = 1
 s = w / 5
 for i = 1, l-1 do
 if i == c and d < s then

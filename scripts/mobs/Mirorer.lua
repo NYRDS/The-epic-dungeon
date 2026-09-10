@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 return mob.init{
-damage = function(self, cause) 
+damage = function(self, cause)
 local level = RPD.Dungeon.level
 for i = 1,2 do
 local mob = RPD.mob("Mirror")

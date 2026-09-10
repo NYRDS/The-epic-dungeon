@@ -13,14 +13,14 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 local TIME_TO_ZAP = 1
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
            image     = 11,
             name      = RPD.StringsManager:maybeId("NefritWand_Name"),
             info      = RPD.StringsManager:maybeId("NefritWand_Info")
         }
-end, 
+end,
 
 activate = function(self, item, hero)
 end,
@@ -39,7 +39,7 @@ thisItem:removeItemFrom(RPD.Dungeon.hero)
 end
 local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
-  
+
             local mob = RPD.mob("IceNefrit")
 local cell = hero:getPos()
             mob:setPos(cell)
@@ -49,14 +49,14 @@ if math.random(1,2) == 1   then
 
 local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
-  
+
             local mob = RPD.mob("IceNefrit")
 local cell = hero:getPos()
             mob:setPos(cell)
       level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
       else
       RPD.glog(RPD.StringsManager:maybeId("NothingHasHappened"))
-end  
+end
 end
 thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,

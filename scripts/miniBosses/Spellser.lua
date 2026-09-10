@@ -24,7 +24,7 @@ return mob.init{
 spawn = function(self)
 if not storage.get("miniBos") then
 storage.put("miniBos",true)
-for i = 0,RPD.Dungeon.level:getLength()-1 do   
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.EXIT then
 RPD.Dungeon.level:set(i-1, RPD.Terrain.LOCKED_EXIT )
 RPD.GameScene:updateMap(i-1)
@@ -32,7 +32,7 @@ RPD.GameScene:updateMap(i-1)
 end
 end
 end,
-    zapProc = function(self, cause) 
+    zapProc = function(self, cause)
         local level = RPD.Dungeon.level
             local mob = RPD.mob(mobs[math.random(1,7)])
             local pos = level:getEmptyCellNextTo(self:getPos())

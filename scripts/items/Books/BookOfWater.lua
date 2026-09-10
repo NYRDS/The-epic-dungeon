@@ -27,7 +27,7 @@ return item.init{
     end,
     actions = function() return {RPD.StringsManager:maybeId("SeaArrow"),RPD.StringsManager:maybeId("SummonElemental"),RPD.StringsManager:maybeId("WaterRegeneration")} end,
 cellSelected = function(self, thisItem, action, cell)
-        if action == RPD.StringsManager:maybeId("SeaArrow") then 
+        if action == RPD.StringsManager:maybeId("SeaArrow") then
                 local soul =  RPD.Actor:findChar(cell)
                 if soul then
         RPD.affectBuff(soul, RPD.Buffs.Slow , 10);

@@ -13,7 +13,7 @@ return ai.init{
     act       = function(self, ai, me)
 if math.random(1,6) == 1 then
 me:spend(1)
-for i = 0,RPD.Dungeon.level:getLength()-1 do            
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.STATUE then
 RPD.zapEffect(i-1,RPD.Dungeon.hero:getPos(),"Dart");
 RPD.Dungeon.hero:damage(math.random(1,3),me)
@@ -31,7 +31,7 @@ local pos = level:cell(i,j)
 local soul =  RPD.Actor:findChar(pos-1)
 if level.map[pos] == RPD.Terrain.EMPTY then
 if math.random(1,3) == 3 then
-if soul and soul ~= me then 
+if soul and soul ~= me then
 RPD.topEffect(pos-1,"Klak")
 soul:damage(math.random(1,10), me)
  else

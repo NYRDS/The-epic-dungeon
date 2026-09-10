@@ -22,8 +22,8 @@ if not storage.get("Deco") then
 storage.put("Deco")
 RPD.Dungeon.level:set(RPD.Dungeon.hero:getPos(),RPD.Terrain.ENTRANCE)
 end
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,"NestKeeper")
 maybeMob:getSprite():killAndErase()

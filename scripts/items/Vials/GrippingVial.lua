@@ -39,7 +39,7 @@ return item.init{
                	end
                	RPD.topEffect(pos,"Klak")
              end
-           end 
+           end
         end
         local Splash = luajava.bindClass("com.watabou.pixeldungeon.effects.Splash")
         Splash.at( RPD.Sfx.CellEmitter:get(cell) , cell,-3,3, 0x81ff2f, 1)

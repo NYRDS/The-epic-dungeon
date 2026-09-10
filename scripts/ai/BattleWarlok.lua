@@ -22,7 +22,7 @@ me:spend(1)
 end
 
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)          
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 3500 then
 local dst = RPD.Ballistica:cast(me:getPos(),i-1,true,true,true)
 local damager = RPD.Actor:findChar(dst)

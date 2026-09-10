@@ -13,14 +13,14 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 local TIME_TO_ZAP = 1
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
            image     = 3,
             name      = RPD.StringsManager:maybeId("WandOfCrystalion_Name"),
             info      = RPD.StringsManager:maybeId("WandOfCrystalion_Info")
         }
-end, 
+end,
 
 activate = function(self, item, hero)
 RPD.removeBuff(hero, RPD.Buffs.Light)
@@ -33,8 +33,8 @@ end,
 
 castOnCell = function(self, thisItem, cell,dst,lvl)
 thisItem:getUser():spend(1)
-local maybeMob = RPD.Actor:findChar(dst)          
-if maybeMob and maybeMob ~= RPD.Dungeon.hero then 
+local maybeMob = RPD.Actor:findChar(dst)
+if maybeMob and maybeMob ~= RPD.Dungeon.hero then
 RPD.playSound( "snd_degrade.ogg" )
 RPD.topEffect(dst,"smash_blast")
 maybeMob:damage(RPD.Dungeon.depth*(lvl+1), thisItem:getUser())

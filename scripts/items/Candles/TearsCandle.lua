@@ -15,7 +15,7 @@ local storage = require "scripts/lib/storage"
 
 local tearscandle
 
-return wand.init{ 
+return wand.init{
     desc  = function(self, item)
 tearscandle = item
         return {
@@ -23,7 +23,7 @@ tearscandle = item
         name      = RPD.StringsManager:maybeId("TearsCandle_Name"),
         info      = RPD.StringsManager:maybeId("TearsCandle_Info")
         }
-end, 
+end,
 
 actions = function()
 return {}

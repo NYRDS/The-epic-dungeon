@@ -14,7 +14,7 @@ return mob.init{
     zapProc = function(self, enemy, dmg)
         RPD.affectBuff(enemy, RPD.Buffs.Paralysis,math.random(0,1))
         return dmg
-    end, 
+    end,
     die = function(self, enemy, dmg)
         self:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.UP, 6 )
 end

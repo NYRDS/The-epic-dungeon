@@ -8,7 +8,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-local NormalItem = 
+local NormalItem =
 {
 "Bomb",
 "GuadsMolot",
@@ -35,7 +35,7 @@ local CoolItem =
 {
 "WaterSpear",
 "DragonWand"
-} 
+}
 local npc
 local client
 

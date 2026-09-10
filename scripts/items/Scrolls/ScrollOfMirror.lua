@@ -28,7 +28,7 @@ RPD.Dungeon.hero:spend(TIME_TO_READ)
 RPD.playSound( "snd_read.mp3")
         if action == RPD.Actions.read then
         local level = RPD.Dungeon.level
-for i=1,2 do 
+for i=1,2 do
             local mob = RPD.mob("Mirror")
             local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
@@ -38,7 +38,7 @@ RPD.Wands.wandOfBlink:appear( image, pos );
     end
   end
  end
- item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+ item:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,
 bag = function(self, item)
         return "ScrollHolder"

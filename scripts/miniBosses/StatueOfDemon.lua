@@ -47,7 +47,7 @@ local to = cell
 local dst = RPD.Ballistica:cast(from,to,true,true,true)
 missile = me:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset(from,dst,nil)
-missile:size(6); 
+missile:size(6);
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 local enemy = RPD.Actor:findChar(dst)
 if enemy and enemy ~= me then
@@ -81,7 +81,7 @@ zapProc = function(self, enemy)
 RPD.playSound( "snd_rocks.mp3" )
 missile = self:getSprite():getParent():recycle(RPD.Sfx.MagicMissile)
 missile:reset(self:getPos(),enemy:getPos(),nil)
-missile:size(6); 
+missile:size(6);
 missile:pour(RPD.Sfx.EarthParticle.FACTORY, 0.05)
 end
 }

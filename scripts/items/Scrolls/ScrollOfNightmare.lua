@@ -26,7 +26,7 @@ return item.init{
     actions = function() return {RPD.Actions.read} end,
 
     execute = function(self, item, hero, action, cause )
-   
+
 if action == RPD.Actions.read then
 
 local level = RPD.Dungeon.level

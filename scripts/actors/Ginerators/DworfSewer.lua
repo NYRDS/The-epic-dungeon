@@ -24,7 +24,7 @@ if level.map[i] == RPD.Terrain.WALL_DECO then
 local effect = RPD.mob("effects/LightMagic")
 effect:setPos(i-1)
 RPD.Dungeon.level:spawnMob(effect)
-effect:move(0) 
+effect:move(0)
 RPD.Sfx.CellEmitter:center(i-1):pour(RPD.Sfx.ElmoParticle.FACTORY, 0.08);
 end
 end
@@ -32,7 +32,7 @@ if not storage.get("key") then
 
 --подготовка
 local level = RPD.Dungeon.level
-for i = 0,RPD.Dungeon.level:getLength()-1 do           
+for i = 0,RPD.Dungeon.level:getLength()-1 do
 level:set(i, RPD.Terrain.CHASM )
 RPD.GameScene:updateMap(i)
 end
@@ -40,7 +40,7 @@ end
 
 local level = RPD.Dungeon.level
 local W = level:getWidth()
-for i = 0,RPD.Dungeon.level:getLength()-1 do           
+for i = 0,RPD.Dungeon.level:getLength()-1 do
 if i <= W*2 then
 level:set(i, RPD.Terrain.EMPTY_SP )
 RPD.GameScene:updateMap(i)
@@ -155,7 +155,7 @@ end
 for i = 1, l do
 if level.map[i] == RPD.Terrain.DOOR then
 --if level.map[i+w*2] == RPD.Terrain.WALL or level.map[i-w*2] == RPD.Terrain.WALL or level.map[i+2] == RPD.Terrain.WALL or level.map[i-2] == RPD.Terrain.WALL then
-if 
+if
 level.map[i-1] == RPD.Terrain.DOOR then
 level:set(i-2,RPD.Terrain.WALL)
 
@@ -221,8 +221,8 @@ storage.put("key",true)
 
 end,
 act = function()
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() == "effects/LightMagic" then
 maybeMob:move(0)
 end

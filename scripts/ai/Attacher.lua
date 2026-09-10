@@ -17,7 +17,7 @@ f = EPD.Char
 me:beckon(f:getPos())
 EPD.Char = nil
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)          
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and not maybeMob:isPet() then
 if me:canAttack(maybeMob) then
 if RPD.Dungeon.level:distance(me:getPos(),i) == 1 then

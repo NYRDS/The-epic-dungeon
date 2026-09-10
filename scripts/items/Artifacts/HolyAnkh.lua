@@ -19,11 +19,11 @@ return item.init{
             info      = RPD.StringsManager:maybeId("HolyAnkh_Info"),
             stackable = true,
             upgradable    = false,
- 
+
              price     = 0,
             isArtifact    = true
         }
-    end,   
+    end,
 activate = function(self, item, hero)
 if RPD.Dungeon.hero ~= nil then
 

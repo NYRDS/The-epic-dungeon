@@ -11,12 +11,12 @@ local actor = require "scripts/lib/actor"
 
 return actor.init({
     activate = function()
-for i = 0,RPD.Dungeon.level:getLength()-1 do                local maybeMob = RPD.Actor:findChar(i)          
-    if maybeMob and maybeMob ~= RPD.Dungeon.hero then 
+for i = 0,RPD.Dungeon.level:getLength()-1 do                local maybeMob = RPD.Actor:findChar(i)
+    if maybeMob and maybeMob ~= RPD.Dungeon.hero then
 maybeMob:damage(100, RPD.Dungeon.hero)
     end
 end
-for i = 0,RPD.Dungeon.level:getLength()-1 do            
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.HIGH_GRASS then
 RPD.Dungeon.level:set(i-1, RPD.Terrain.EMPTY )
 RPD.GameScene:updateMap(i-1)
@@ -26,7 +26,7 @@ RPD.Dungeon.level:set(i-1, RPD.Terrain.EMPTY )
 RPD.GameScene:updateMap(i-1)
     end
 end
-for i = 0,RPD.Dungeon.level:getLength()-1 do            
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL then
 RPD.Dungeon.level:set(i-1, RPD.Terrain.CHASM )
 RPD.GameScene:updateMap(i-1)

@@ -30,8 +30,8 @@ end
 end
 end
 
-for i = 1,RPD.Dungeon.level:getLength()-1 do       
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,"IceCastleKeeper")
 maybeMob:getSprite():killAndErase()

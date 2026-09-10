@@ -30,7 +30,7 @@ local y = RPD.Dungeon.level:cellY(me:getPos())
 local pos = RPD.Dungeon.level:cell(i,j)
 local soul =  RPD.Actor:findChar(pos-1)
 if RPD.Dungeon.level.map[pos] == RPD.Terrain.EMPTY then
-if soul and soul ~= me then 
+if soul and soul ~= me then
 RPD.topEffect(pos-1,"ShadowTentacle")
 soul:damage(math.random(25,60), me)
  else
@@ -74,7 +74,7 @@ else
 for i=1, RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
 if math.random(1,200) == 1 then
-local mob = RPD.mob("NightmareAngel") 
+local mob = RPD.mob("NightmareAngel")
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 end

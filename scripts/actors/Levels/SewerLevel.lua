@@ -85,7 +85,7 @@ RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(0,0)})
 ,pos).type = RPD.Heap.Type.MIMIC
 RPD.GameScene:updateMap(pos)
 
-RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(RPD.Dungeon.depth,RPD.Dungeon.depth*4)}) 
+RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(RPD.Dungeon.depth,RPD.Dungeon.depth*4)})
 ,pos).type = RPD.Heap.Type.MIMIC
 RPD.GameScene:updateMap(pos)
 else
@@ -102,7 +102,7 @@ RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(0,0)})
 ,pos2).type = RPD.Heap.Type.MIMIC
 RPD.GameScene:updateMap(pos2)
 
-RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(RPD.Dungeon.depth,RPD.Dungeon.depth*4)}) 
+RPD.Dungeon.level:drop(RPD.creteItem("Gold", {quantity= math.random(RPD.Dungeon.depth,RPD.Dungeon.depth*4)})
 ,pos2).type = RPD.Heap.Type.MIMIC
 RPD.GameScene:updateMap(pos2)
 else
@@ -115,7 +115,7 @@ RPD.GameScene:updateMap(pos2)
 end
 
 end
-for i = 0,RPD.Dungeon.level:getLength()-1 do       
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.EXIT then
 RPD.Dungeon.level:set(i-1, RPD.Terrain.LOCKED_EXIT )
 RPD.GameScene:updateMap(i-1)

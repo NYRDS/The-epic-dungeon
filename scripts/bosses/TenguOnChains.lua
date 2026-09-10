@@ -15,7 +15,7 @@ local storage = require "scripts/lib/storage"
 
 local GameLoop = luajava.bindClass("com.nyrds.pixeldungeon.game.GameLoop")
 
-return mob.init({ 
+return mob.init({
 act       = function(me)
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) <= 2 and GameLoop:getDifficultyFactor() ~= 2 then
 if me:getPos() == 67 then

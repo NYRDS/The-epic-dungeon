@@ -26,7 +26,7 @@ RPD.removeBuff(buff.target,RPD.Buffs.Light)
     end,
     act = function(self,buff)
 buff:detach()
-end, 
+end,
     charAct = function(enemy,buff,self)
 buff:spend(1)
 buff.target:damage(math.random(RPD.Dungeon.hero:lvl()+1,RPD.Dungeon.depth),RPD.Dungeon.hero)

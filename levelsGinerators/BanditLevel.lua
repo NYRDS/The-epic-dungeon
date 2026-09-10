@@ -1,4 +1,4 @@
-local table = 
+local table =
 {
 kind = "Castle",
 Entrance = "BanditEntrance",

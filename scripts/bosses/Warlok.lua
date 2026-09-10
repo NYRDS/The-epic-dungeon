@@ -9,7 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init({ 
+return mob.init({
   stats = function(self)
         RPD.permanentBuff(self, RPD.Buffs.Roots)
     end,
@@ -19,7 +19,7 @@ RPD.placeBlob( RPD.Blobs.Fire, 88, 100)
 RPD.placeBlob( RPD.Blobs.Fire, 87, 100)
  RPD.placeBlob( RPD.Blobs.Fire, 105, 100)
  RPD.placeBlob( RPD.Blobs.Fire, 103, 100)
- RPD.placeBlob( RPD.Blobs.Fire, 119, 100) 
+ RPD.placeBlob( RPD.Blobs.Fire, 119, 100)
 RPD.placeBlob( RPD.Blobs.Fire, 120, 100)
  RPD.placeBlob( RPD.Blobs.Fire, 121, 100)
     end,

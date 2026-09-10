@@ -18,7 +18,7 @@ for j = y - 5, y + 5 do
 local pos = level:cell(i,j)
 local soul =  RPD.Actor:findChar(pos-1)
 if level.map[pos] == RPD.Terrain.EMPTY then
-if soul and soul ~= self then 
+if soul and soul ~= self then
 RPD.topEffect(pos-1,"Klak")
 soul:damage(math.random(10,30), self)
 else

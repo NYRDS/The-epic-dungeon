@@ -45,7 +45,7 @@ return item.init{
         if latestDeadMob.class ~= nil then
             local mob = RPD.mob(latestDeadMob.class)
             storage.put(latest_kill_index, {})
-           
+
             local level = RPD.Dungeon.level
             local mobPos = latestDeadMob.pos
 
@@ -54,7 +54,7 @@ return item.init{
 mob:loot(RPD.ItemFactory:itemByName("Gold"))
                 RPD.Mob:makePet(mob, hero)
                 level:spawnMob(mob)
-                hero:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 ) 
+                hero:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
                 mob:getSprite():emitter():burst( RPD.Sfx.ShadowParticle.CURSE, 6 )
                 RPD.playSound( "snd_cursed.mp3" )
 RPD.Dungeon.hero:spend(TIME_TO_READ)
@@ -69,7 +69,7 @@ RPD.playSound( "snd_read.mp3")
         RPD.glog("RaiseDead_NoKill")
         return false
     end
-    item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+    item:detach(RPD.Dungeon.hero:getBelongings().backpack)
   end,
   bag = function(self, item)
         return "ScrollHolder"

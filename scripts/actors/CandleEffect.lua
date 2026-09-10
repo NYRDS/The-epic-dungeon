@@ -17,12 +17,12 @@ if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL_DECO then
 end
 end
 local mob = RPD.mob("TownShopkeeper")
-for i = 1,RPD.Dungeon.level:getLength()-1 do           
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "TownShopkeeper" then
 RPD.topEffect(i,"DarckKeeper")
 maybeMob:getSprite():killAndErase()
 end
 end
 end
-}) 
+})

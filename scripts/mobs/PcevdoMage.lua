@@ -14,7 +14,7 @@ RPD.resetPos(self,enemy)
 RPD.playSound( "teleport.ogg")
 end
 
-return mob.init({ 
+return mob.init({
 zapProc = function(self, enemy, dmg)
 teleport(self,enemy)
 return dmg

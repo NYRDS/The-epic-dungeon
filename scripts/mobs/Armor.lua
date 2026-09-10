@@ -11,8 +11,8 @@ local mob = require"scripts/lib/mob"
 
 local shields = require"scripts/lib/shields"
 
-return mob.init({ 
-damage = function(self, dmg,enemy) 
+return mob.init({
+damage = function(self, dmg,enemy)
 if math.random(1,2) == 1 then
 RPD.topEffect(self:getPos(),"shield_blocked")
 RPD.playSound("body_armor")

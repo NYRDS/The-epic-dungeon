@@ -19,7 +19,7 @@ return dmg
 end,
 attackProc = function(self, enemy, dmg)
 if math.random(1,20) == 1 then
-RPD.placeBlob(RPD.Blobs.Web, enemy:getPos(), 5 );       
+RPD.placeBlob(RPD.Blobs.Web, enemy:getPos(), 5 );
 end
 return dmg
 end

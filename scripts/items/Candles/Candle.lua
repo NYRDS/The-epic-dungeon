@@ -14,7 +14,7 @@ local EPD = require "scripts/lib/dopClasses"
 local storage = require "scripts/lib/storage"
 
 local candle
-return wand.init{ 
+return wand.init{
     desc  = function(self, item)
 		candle = item
     return {
@@ -22,7 +22,7 @@ return wand.init{
         name      = RPD.StringsManager:maybeId("Candle_Name"),
         info      = RPD.StringsManager:maybeId("Candle_Info")
         }
-end, 
+end,
 
 actions = function()
 return {}

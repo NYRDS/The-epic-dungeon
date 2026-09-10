@@ -15,7 +15,7 @@ act       = function(me, ai)
 if RPD.Dungeon.level:distance(RPD.Dungeon.hero:getPos(),me:getPos()) < 5 then
 
 zap = function(from,to)
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.permanentBuff(mob,RPD.Buffs.Light)

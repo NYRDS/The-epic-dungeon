@@ -27,7 +27,7 @@ return item.init{
 
     cellSelected = function(self, thisItem, action, cell,item)
 
-        if action == RPD.StringsManager:maybeId("Activate") then 
+        if action == RPD.StringsManager:maybeId("Activate") then
 local wand = RPD.ItemFactory:itemByName("WandOfFlock")
 wand:mobWandUse(thisItem:getUser(), cell)
 thisItem:getUser():spend(1)
@@ -38,7 +38,7 @@ wand:mobWandUse(thisItem:getUser(), cell)
 end
 
 end
-thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,
     execute = function(self, item, hero, action)
         if action == RPD.StringsManager:maybeId("Activate") then

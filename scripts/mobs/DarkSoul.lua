@@ -3,7 +3,7 @@
 -- Date: 25.01.2018
 -- Time: 0:26
 -- This file is part of Remixed Pixel Dungeon.
---Вы все хорошие люди. 
+--Вы все хорошие люди.
 
 local RPD = require "scripts/lib/epicClasses"
 

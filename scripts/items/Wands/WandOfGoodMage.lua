@@ -13,14 +13,14 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 local TIME_TO_ZAP = 1
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
            image     = 2,
             name      = RPD.StringsManager:maybeId("WandOfGoodMage_Name"),
             info      = RPD.StringsManager:maybeId("WandOfGoodMage_Info")
         }
-end, 
+end,
 
     activate = function(self, item, hero)
                 RPD.removeBuff(item:getUser(), "EarthW")

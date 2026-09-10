@@ -29,7 +29,7 @@ end
 me:getSprite():zap(me:getPos())
 end
 
-return mob.init({ 
+return mob.init({
 act       = function(me)
 if RPD.Dungeon.level:distance(me:getPos(),RPD.Dungeon.hero:getPos()) < 4 then
 addSkeleton(me)

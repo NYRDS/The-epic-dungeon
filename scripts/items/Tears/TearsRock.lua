@@ -23,7 +23,7 @@ return item.init{
              price     = 200,
            isArtifact    = true
         }
-    end,   
+    end,
     actions = function(self, item,  hero)
         if item:isEquipped(hero) then
             return {RPD.StringsManager:maybeId("Action_Use")}
@@ -48,7 +48,7 @@ RPD.playSound( "TearsRock.ogg" )
 RPD.topEffect(cell,"BlueMagicCould")
 local mob = RPD.mob("TearsGuard")
 mob:setPos(cell)
-level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero)) 
+level:spawnMob(RPD.Mob:makePet(mob,RPD.Dungeon.hero))
 end
 end
 end

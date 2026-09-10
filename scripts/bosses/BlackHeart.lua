@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 local storage = require"scripts/lib/storage"
 
-return mob.init({ 
+return mob.init({
 die = function(self)
 RPD.GameScene:bossSlain()
 RPD.playSound("snd_boss.mp3")
@@ -31,7 +31,7 @@ for j = y - 3, y + 3 do
 if math.random(1,4) == 1 then
 local to = level:cell(i,j)
 local from = self:getPos()
-local mob = RPD.mob("effects/Boll") 
+local mob = RPD.mob("effects/Boll")
 mob:setPos(from)
 level:spawnMob(mob)
 local factor = level:distance(from,to)

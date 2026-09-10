@@ -10,7 +10,7 @@ local RPD = require "scripts/lib/epicClasses"
 local mob = require"scripts/lib/mob"
 
 local buffs = {
-    RPD.Buffs.Frost 
+    RPD.Buffs.Frost
 }
 
 return mob.init{

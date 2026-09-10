@@ -18,8 +18,8 @@ return actor.init({
 local level = RPD.Dungeon.level
 if RPD.Dungeon.depth ~= 25 then
 Ginerator.CreateLevel("NightmareLevel",true)
-for i = 1,RPD.Dungeon.level:getLength()-1 do       
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,"NightmareKeeper")
 maybeMob:getSprite():killAndErase()

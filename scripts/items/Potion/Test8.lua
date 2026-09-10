@@ -19,11 +19,11 @@ return item.init{
             info      = RPD.StringsManager:maybeId("Test8_Info"),
             stackable = true,
             upgradable    = false,
- 
+
              price     = 30,
 defaultAction = RPD.Actions.drink
         }
-    end, 
+    end,
     actions = function() return {RPD.Actions.drink} end,
 execute = function(self, item, user, action)
 if action == RPD.Actions.drink then

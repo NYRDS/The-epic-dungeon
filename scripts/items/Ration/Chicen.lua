@@ -27,5 +27,5 @@ return item.init{
         if action == RPD.Actions.eat then
             hero:eat(item,RPD.Buffs.Hunger.STARVING, RPD.StringsManager:maybeId("Delicious"))
         end
-    end 
+    end
 }

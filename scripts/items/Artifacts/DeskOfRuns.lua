@@ -19,7 +19,7 @@ return item.init{
             info      = RPD.StringsManager:maybeId("DeskOfRuns_Info"),
             stackable = false,
             upgradable    = false,
- 
+
              price     = 30
         }
     end

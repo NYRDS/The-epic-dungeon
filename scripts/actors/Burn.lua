@@ -9,7 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 local actor = require "scripts/lib/actor"
 
 return actor.init({
-    act = function() 
+    act = function()
         local levelSize = RPD.Dungeon.level:getLength()
         local cell = math.random(levelSize)-1
         if not RPD.Dungeon.level.solid[cell] then

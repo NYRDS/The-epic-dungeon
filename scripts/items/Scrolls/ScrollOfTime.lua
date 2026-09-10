@@ -29,7 +29,7 @@ RPD.playSound( "snd_read.mp3")
         if action == RPD.Actions.read then
             RPD.Buffs.Buff:affect(RPD.Dungeon.hero, RPD.Buffs.Invisibility ,70);           RPD.Buffs.Buff:affect(RPD.Dungeon.hero, RPD.Buffs.Paralysis ,70)
         end
-item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+item:detach(RPD.Dungeon.hero:getBelongings().backpack)
     end,
     bag = function(self, item)
         return "ScrollHolder"

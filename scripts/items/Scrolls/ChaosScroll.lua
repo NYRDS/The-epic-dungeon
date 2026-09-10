@@ -11,7 +11,7 @@ local item = require "scripts/lib/item"
 
 return item.init{
     desc  = function ()
-        return { 
+        return {
            image     = math.random(0,11),
             imageFile = "items/Scrolls.png",
             name      = RPD.StringsManager:maybeId("ChaosScroll_Name"),
@@ -25,7 +25,7 @@ return item.init{
     execute = function(self, item, hero, action, cell)
 RPD.Dungeon.hero:spend(TIME_TO_READ)
 RPD.playSound( "snd_read.mp3")
-        if action == RPD.Actions.read then 
+        if action == RPD.Actions.read then
 local blobs = {
     RPD.Blobs.Fire,
  RPD.Blobs.Regrowth,
@@ -40,21 +40,21 @@ item:detach(RPD.Dungeon.hero:getBelongings().backpack)
        local x = level:cellX(cell)
         local y = level:cellY(cell)
         for i = x - 1, x + 3 do
-            for j = y - 1, y + 3 do    
+            for j = y - 1, y + 3 do
               local pos = level:getEmptyCellNextTo(hero:getPos())
             if (level:cellValid(pos)) then
-  
+
     RPD.placeBlob( blobs[math.random(1,5)], pos, 50 );
          end
     end
   end
- end 
+ end
 end,
 bag = function(self, item)
         return "ScrollHolder"
     end
 
-        
+
 }
-    
+
 

@@ -18,7 +18,7 @@ RPD.Blobs.ConfusionGas,
 RPD.Blobs.ParalyticGas
 }
 local zap =
-{ 
+{
 "Shadow",
 "Fire",
 "Ice",

@@ -13,15 +13,15 @@ local EPD = require "scripts/lib/dopClasses"
 
 local storage = require "scripts/lib/storage"
 
-return wand.init{ 
-    desc  = function()  
+return wand.init{
+    desc  = function()
         return {
             image         = 21,
             imageFile     = "items/wands_remastered.png",
             name      = RPD.StringsManager:maybeId("BlessWand_Name"),
             info      = RPD.StringsManager:maybeId("BlessWand_Info")
         }
-end, 
+end,
 
 activate = function(self, item, hero)
 end,
@@ -41,7 +41,7 @@ local level = RPD.Dungeon.level
      for j = y - 1, y + 1 do
             local pos = level:cell(i,j)
  local soul =  RPD.Actor:findChar(pos)
-            if soul and soul ~= RPD.Dungeon.hero then 
+            if soul and soul ~= RPD.Dungeon.hero then
  RPD.affectBuff(soul, RPD.Buffs.Blessed , 30*(thisItem:level()+1));
 if not level.solid[pos] then
      RPD.Sfx.CellEmitter:get(pos):burst( RPD.Sfx.ShaftParticle.FACTORY, 5)

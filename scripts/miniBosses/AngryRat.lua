@@ -35,7 +35,7 @@ die = function()
 miniBoss1 = nil
 end,
 spawn = function(self)
-for i = 0,RPD.Dungeon.level:getLength()-1 do            
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.EXIT then
 RPD.Dungeon.level:set(i-1, RPD.Terrain.LOCKED_EXIT )
 RPD.GameScene:updateMap(i-1)

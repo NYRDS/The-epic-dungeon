@@ -15,7 +15,7 @@ local n = 100
 return mob.init({
 act = function(me,mee)
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local mob = RPD.Actor:findChar(i)        
+local mob = RPD.Actor:findChar(i)
 if mob and mob ~= RPD.Dungeon.hero and mob:ht() == 76 then
 if n > RPD.Dungeon.level:distance(me:getPos(),mob:getPos() ) then
 n = RPD.Dungeon.level:distance(me:getPos(),mob:getPos() )

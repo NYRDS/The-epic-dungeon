@@ -46,8 +46,8 @@ end
 end
 end
 
-for i = 1,RPD.Dungeon.level:getLength()-1 do       
-local maybeMob = RPD.Actor:findChar(i)          
+for i = 1,RPD.Dungeon.level:getLength()-1 do
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob:getEntityKind() ==  "Shopkeeper" then
 RPD.topEffect(i,"CityKeeper")
 maybeMob:getSprite():killAndErase()
@@ -67,7 +67,7 @@ end,
 act = function()
 --[[
 if RPD.Dungeon.depth == 19 then
-for i = 0,RPD.Dungeon.level:getLength()-1 do            
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.WALL or RPD.Dungeon.level[i] == RPD.Terrain.WALL_DECO then
 RPD.Dungeon.level:set(i-1, RPD.Terrain.BOOKSHELF )
 RPD.GameScene:updateMap(i-1)

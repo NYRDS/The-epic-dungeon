@@ -27,7 +27,7 @@ local Wands = {
 "WandOfPossess",
 "WandOfRock"
 }
-local a 
+local a
 return mob.init{
 interact = function(self, chr)
 RPD.resetPos(self,chr)

@@ -9,7 +9,7 @@ local RPD = require "scripts/lib/epicClasses"
 
 local mob = require"scripts/lib/mob"
 
-return mob.init({ 
+return mob.init({
 act       = function(me, ai, e)
 if me:getPos() ~= 176 then
 RPD.Sfx.MagicMissile:whiteLight(me:getSprite():getParent(),me:getPos(),176,nil)
@@ -20,7 +20,7 @@ RPD.playSound( "snd_zap.ogg" )
 end
 
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)          
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 3500 then
 local dst = RPD.Ballistica:cast(me:getPos(),i-1,true,true,true)
 local damager = RPD.Actor:findChar(dst)
@@ -35,7 +35,7 @@ end
 end,
 interact = function(self,chr)
 for i = 1, RPD.Dungeon.level:getLength()-1 do
-local maybeMob = RPD.Actor:findChar(i)        
+local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and maybeMob ~= RPD.Dungeon.hero and maybeMob:ht() == 76 then
 break
 end

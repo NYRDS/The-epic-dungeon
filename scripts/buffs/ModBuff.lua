@@ -57,7 +57,7 @@ cry = nil
     end,
     act = function(self,buff)
         buff:detach()
-end, 
+end,
 
     charAct = function(self,buff)
 EPD.time = EPD.time + 1

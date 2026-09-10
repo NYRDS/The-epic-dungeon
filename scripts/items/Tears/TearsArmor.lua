@@ -86,7 +86,7 @@ if dr == itt and stat ~= armor then
 stat = armor
 hero:overrideSpriteLayer("armor",armor)
 pcall(function() hero:updateSprite() end)
-elseif dr ~= itt and stat == armor then 
+elseif dr ~= itt and stat == armor then
 hero:overrideSpriteLayer("armor",nil)
 pcall(function() hero:updateSprite() end)
 stat = nil

@@ -29,12 +29,12 @@ return true
     end,
     act = function(self,buff)
         buff:detach()
-end, 
+end,
    charAct = function(self,buff)
 if RPD.Dungeon.level.water[buff.target:getPos()] then
 buff.target:hp(math.min(buff.target:hp()+10));
 buff:spend(1)
 buff.target:getSprite():emitter():burst(RPD.Sfx.Speck:factory(RPD.Sfx.Speck.HEALING ), 5)
 end
-end 
+end
 }

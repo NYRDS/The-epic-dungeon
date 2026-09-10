@@ -29,7 +29,7 @@ me:spend(4)
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.CHASM_WATER then
 if math.random(1,100) == 1 then
-local mob = RPD.mob("Tentacle") 
+local mob = RPD.mob("Tentacle")
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 end
@@ -40,11 +40,11 @@ me:spend(1)
 for i = 1, math.random(2,5) do
 for i = 1, RPD.Dungeon.level:getLength() do
 if RPD.Dungeon.level.map[i] ~= RPD.Dungeon.level.solid[i-1] and math.random(1,30) == 1 then
-pos = i-1 
+pos = i-1
 break
 end
 end
-local mob = RPD.mob("effects/DarckShot") 
+local mob = RPD.mob("effects/DarckShot")
 mob:setPos(me:getPos())
 RPD.Dungeon.level:spawnMob(mob)
 local distance = RPD.Dungeon.level:distance(me:getPos(),pos)
@@ -63,14 +63,14 @@ end
 if me:hp() < 1000 then
 
 if not storage.get("warlock") then
-storage.put("warlock",true) 
+storage.put("warlock",true)
 local Music = luajava.bindClass("com.watabou.noosa.audio.Music")
 Music.INSTANCE:play("Help.ogg",true)
 
 for i=1,RPD.Dungeon.level:getLength()-1 do
 if RPD.Dungeon.level.map[i] == RPD.Terrain.EMPTY then
 RPD.topEffect(i-1,"Portal")
-local mob = RPD.mob("BattleWarlok") 
+local mob = RPD.mob("BattleWarlok")
 mob:setPos(i-1)
 RPD.Dungeon.level:spawnMob(mob)
 
@@ -80,22 +80,22 @@ break
 end
 end
 RPD.topEffect(40,"Portal")
-local mob = RPD.mob("DworfSolder") 
+local mob = RPD.mob("DworfSolder")
 mob:setPos(40)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.topEffect(51,"Portal")
 RPD.setAi(mob,"Wandering")
-local mob = RPD.mob("DworfSolder") 
+local mob = RPD.mob("DworfSolder")
 mob:setPos(51)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.setAi(mob,"Wandering")
 RPD.topEffect(274,"Portal")
-local mob = RPD.mob("DworfSolder") 
+local mob = RPD.mob("DworfSolder")
 mob:setPos(274)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.setAi(mob,"Wandering")
 RPD.topEffect(285,"Portal")
-local mob = RPD.mob("DworfSolder") 
+local mob = RPD.mob("DworfSolder")
 mob:setPos(285)
 RPD.Dungeon.level:spawnMob(mob)
 RPD.setAi(mob,"Wandering")

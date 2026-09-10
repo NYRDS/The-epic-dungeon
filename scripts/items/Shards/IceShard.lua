@@ -25,15 +25,15 @@ return item.init{
     actions = function() return {RPD.Actions.zap} end,
 
     cellSelected = function(self, thisItem, action, cell)
-        if action == RPD.Actions.zap then 
+        if action == RPD.Actions.zap then
 thisItem:getUser():spend(1)
         local dst = RPD.Ballistica:cast(thisItem:getUser():getPos(), cell, true, true, true)
 thisItem:getUser():spend(1)
        RPD.zapEffect(thisItem:getUser():getPos(), dst, "Ice")
             RPD.placePseudoBlob( RPD.PseudoBlobs.Freezing, dst)
- 
+
 end
-thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+thisItem:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,
     execute = function(self, item, hero, action)
         if action == RPD.Actions.zap then

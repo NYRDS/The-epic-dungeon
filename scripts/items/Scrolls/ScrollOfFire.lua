@@ -23,10 +23,10 @@ return item.init{
              price     = 50
         }
     end, actions = function() return {RPD.Actions.read} end,
-    execute = function(self, item, hero, action, cell, char, data) 
+    execute = function(self, item, hero, action, cell, char, data)
 RPD.Dungeon.hero:spend(TIME_TO_READ)
 RPD.playSound( "snd_read.mp3")
-        if action == RPD.Actions.read then 
+        if action == RPD.Actions.read then
        local level = RPD.Dungeon.level
         local hero = RPD.Dungeon.hero
        local x = level:cellX(cell)
@@ -34,14 +34,14 @@ RPD.playSound( "snd_read.mp3")
         for i = x - 1, x + 3 do
             for j = y - 1, y + 3 do
             local pos = level:getEmptyCellNextTo(hero:getPos())
- 
+
             if (level:cellValid(pos)) then
-      RPD.placeBlob( RPD.Blobs.Fire , pos, 50 );   
+      RPD.placeBlob( RPD.Blobs.Fire , pos, 50 );
             end
         end
-    end 
+    end
 end
-item:detach(RPD.Dungeon.hero:getBelongings().backpack) 
+item:detach(RPD.Dungeon.hero:getBelongings().backpack)
 end,
 bag = function(self, item)
         return "ScrollHolder"

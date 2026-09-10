@@ -18,7 +18,7 @@ return item.init{
             info      = RPD.StringsManager:maybeId("CorpseDust_Info"),
             stackable = false,
             upgradable    = false,
- 
+
              price     = 0
         }
    end

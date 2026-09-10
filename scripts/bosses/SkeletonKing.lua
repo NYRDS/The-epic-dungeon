@@ -11,7 +11,7 @@ local mob = require"scripts/lib/mob"
 
 local isPlaying = false
 
-return mob.init({ 
+return mob.init({
     act = function(self)
          if self:getState():getTag() == "HUNTING" then
              if not isPlaying then
@@ -21,7 +21,7 @@ return mob.init({
          end
     end,
     zapProc = function(self)
-for i = 0,RPD.Dungeon.level:getLength()-1 do            
+for i = 0,RPD.Dungeon.level:getLength()-1 do
     if RPD.Dungeon.level.map[i] == RPD.Terrain.STATUE then
 RPD.Sfx.CellEmitter:get(i-1):start(RPD.Sfx.ElmoParticle.FACTORY, 0.1,10);
 local mob = RPD.mob("Skeleton")            mob:setPos(i-1)

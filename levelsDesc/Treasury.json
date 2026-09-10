@@ -48,7 +48,7 @@
     "Ranged/GuardsHammer":1,
     "Ranged/Threecic":1,
     "Ranged/LightDanger":1
-    /*"Guns/Bolt":1*/
+    
   },
   "ARMOR": {
     "PlateArmor": 1,
@@ -186,10 +186,10 @@
     "CurareDart": 1,
     "Dagger": 1,
     "Weapons/Epee":1
-/*
-    "Guns/Gun":0.5,
-    "Guns/Pichal":1,
-    "Guns/Muchket":2
-*/
+
+
+
+
+
   }
 }

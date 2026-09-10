@@ -10,11 +10,11 @@
    "water":"water1.png",
    "entrance":[7,12],
    "multiexit":[[7,1],[1,10]],
-   /*
-   "mobs":[
-{"kind":"Tengu","x":7,"y":2}
-],
-*/
+   
+
+
+
+
 "items":[
 {"kind":"IronKey","x":12,"y":10}
 ]

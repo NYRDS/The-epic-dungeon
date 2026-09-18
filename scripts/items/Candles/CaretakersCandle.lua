@@ -67,13 +67,12 @@ end
 if item:level() <= 0 then
 item:activate(RPD.Dungeon.hero)
 end
-local Terror = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Terror")
 local Flare = luajava.bindClass("com.watabou.pixeldungeon.effects.Flare")
 if math.random(1,10) == 1 then
 for i = 1,RPD.Dungeon.level:getLength()-1 do
 local maybeMob = RPD.Actor:findChar(i)
 if maybeMob and RPD.Dungeon.level.fieldOfView[i] and maybeMob ~= RPD.Dungeon.hero then
-RPD.affectBuff(maybeMob, Terror,RPD.Dungeon.hero:magicLvl()+10)
+RPD.affectBuff(maybeMob, RPD.Buffs.Terror,RPD.Dungeon.hero:magicLvl()+10)
 --test = Flare(5,32)
 --test:color( 0xFF0000, true )
 --test:show( maybeMob:getSprite(), 2f )

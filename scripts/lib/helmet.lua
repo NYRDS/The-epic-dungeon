@@ -89,8 +89,7 @@ RPD.permanentBuff(hero, "Helmet"):level(self:getDr()*(item:level()+1))
 
 if self:getStr() > item:getUser():effectiveSTR() then
 
-blindness = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blindness")
-RPD.permanentBuff(hero, blindness)
+RPD.permanentBuff(hero, RPD.Buffs.Blindness)
 
 end
 
@@ -108,9 +107,8 @@ end
 function item.deactivate(self, item, hero)
 self:dective(self,item,hero)
 
-blindness = luajava.bindClass("com.watabou.pixeldungeon.actors.buffs.Blindness")
 RPD.removeBuff(hero, "Helmet")
-RPD.removeBuff(hero, blindness)
+RPD.removeBuff(hero, RPD.Buffs.Blindness)
 
 hero:overrideSpriteLayer("helmet",nil)
 hero:overrideSpriteLayer("hair",nil)
